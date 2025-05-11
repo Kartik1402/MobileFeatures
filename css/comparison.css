@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: #f0f2f5;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: #ffe600;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+}
+
+.dropdown input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1;
+    animation: fadeIn 0.3s ease;
+}
+
+.dropdown-content div {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.dropdown-content div:hover {
+    background-color: #e3e3e3;
+}
+
+.dropdown input[type="text"]:focus+.dropdown-content,
+.dropdown-content:hover {
+    display: block;
+}
+
+.comparison-section {
+    padding: 2rem;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.comparison-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table .spec {
+    font-weight: bold;
+    background-color: #e8f1ff;
+    padding: 0.7rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.comparison-table .value {
+    padding: 0.7rem;
+    text-align: center;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.comparison-table .value:hover {
+    transform: scale(1.05);
+}
+
+.comparison-table .icon {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.reset-button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #0056b3;
+}
+
+.rating {
+    color: #ffcc00;
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+}
+/* comparison.css */
+
+/* General styles for device images to maintain equal size */
+.device-image {
+    width: 200px;         /* Set a fixed width for all device images */
+    height: auto;         /* Ensure height adjusts to the aspect ratio */
+    object-fit: contain;  /* Ensure the image fits within the defined width and is not stretched or cropped */
+    display: block;       /* Prevent inline spacing around images */
+    margin: 0 auto;       /* Center the image horizontally */
+}
+
+/* You can customize the width value to make images smaller or larger */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

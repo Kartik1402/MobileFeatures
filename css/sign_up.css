@@ -1,0 +1,163 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(45deg, #00ffcc, #ff00cc);
+    animation: gradientBorder 5s linear infinite;
+}
+
+/* Smooth border color transition */
+@keyframes gradientBorder {
+    0% {
+        border-image-source: linear-gradient(45deg, #00ffcc, #ff00cc);
+    }
+
+    25% {
+        border-image-source: linear-gradient(45deg, #ff00cc, #ff6600);
+    }
+
+    50% {
+        border-image-source: linear-gradient(45deg, #ff6600, #00ffcc);
+    }
+
+    75% {
+        border-image-source: linear-gradient(45deg, #00ffcc, #ff00cc);
+    }
+
+    100% {
+        border-image-source: linear-gradient(45deg, #ff00cc, #00ffcc);
+    }
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.login-form label {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* Animated button */
+.login-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #00ffcc;
+    color: #141e30;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.login-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 255, 204, 0.3);
+}
+
+.switch-text {
+    margin-top: 15px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.switch-text a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.switch-text a:hover {
+    color: #ff00cc;
+}
+
+/* Mouse Trail Styling */
+#trail-container .trail-dot {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: trailAnimation 1.5s ease forwards;
+}
+
+@keyframes trailAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
